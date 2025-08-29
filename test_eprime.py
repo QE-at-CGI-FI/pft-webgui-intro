@@ -15,7 +15,6 @@ def this_is_sample():
         lines = f.readlines()
     return str(lines)
 
-#add ids to tests
 data = [
     ("to be or not be", "5", "2", "0"), 
     ("maaret's", 1, 0, 1), 
