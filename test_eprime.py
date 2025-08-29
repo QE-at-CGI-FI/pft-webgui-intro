@@ -1,7 +1,19 @@
+import requests
+import approvaltests
+from playwright.sync_api import Page
+
 URL = "https://qe-at-cgi-fi.github.io/eprime/"
 
+def test_request():
+    response = requests.get(URL)
+    assert response.status_code == 200
+    approvaltests.verify_html(response.text)
+
+def test_playwright(page: Page):
+    page.goto(URL)
+    
+
 # SESSION
-# Commit the instructions before starting steps
 # Requests or Playwright?
 # webgui testing dependencies and setup after git clone
 # pytest.ini for command line parameters
