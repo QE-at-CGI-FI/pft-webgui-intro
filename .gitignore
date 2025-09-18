@@ -1,1 +1,5 @@
 .venvv/
+.vscode/settings.json
+*.pyc
+__pycache__/
+__pycache__/test_eprime.cpython-312-pytest-8.4.1.pyc
