@@ -31,9 +31,10 @@ def test_playwright(page: Page, input_text, expect_1, expect_2, expect_3):
     page.goto(URL)
     page.fill("#test_field", input_text)
     page.click("#test_button")
-    assert page.inner_text("#test_number_1") == str(expect_1)
-    assert page.inner_text("#test_number_2") == str(expect_2)
-    assert page.inner_text("#test_number_3") == str(expect_3)
+    from playwright.sync_api import expect
+    expect(page.locator("#test_number_1")).to_have_text(str(expect_1))
+    expect(page.locator("#test_number_2")).to_have_text(str(expect_2))
+    expect(page.locator("#test_number_3")).to_have_text(str(expect_3))
     
 
 
@@ -41,7 +42,6 @@ def test_playwright(page: Page, input_text, expect_1, expect_2, expect_3):
 # Input from file
 
 # SESSION
-# Run in GitHub Actions
 # Fix the asserts to expect -style
 # Refactor to classes and page objects
 # pytest.ini and html report
