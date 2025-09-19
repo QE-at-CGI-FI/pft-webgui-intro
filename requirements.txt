@@ -3,3 +3,4 @@ pytest
 pytest-playwright
 approvaltests
 requests
+pytest-html
