@@ -42,9 +42,5 @@ def test_playwright(page: Page, input_text, expect_1, expect_2, expect_3):
 # Input from file
 
 # SESSION
-# Fix the asserts to expect -style
-# Refactor to classes and page objects
-# pytest.ini and html report
-# Fixtures for webgui in conftest.py
 # Allure report
 # Really testing this application
